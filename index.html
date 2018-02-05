@@ -3,150 +3,47 @@
     <head>
         <meta charset="utf-8">
         <title title="Calculadora">CALCULA</title>
-        <!--<link rel="stylesheet" href="css/stilus.css">-->
         <link rel="stylesheet" href="css/stilusdus.css">
     </head>
     
     <body>
-        <!--
-        <div>
-            <table class="centro">
-                <thead>
-                    <tr>
-                        <td colspan="4">
-                            CALCULADORA/JS
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" class="pantalla">
-                            <input type="text" readonly="readonly" id="screen" class="resultado" onkeydown="detectarTecla('calculo', evento);">
-                        </td>
-                    </tr>
-                    <tr>
-                        
-                        <td>
-                            <input type="button" value="C" id="borrar">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="/" id="dividir">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="*" id="multiplicar">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="-" id="restar">
-                        </td>
-                    </tr>
-                    <tr>
-                        
-                        <td>
-                            <input type="button" value="7" id="numero">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="8" id="numero">    
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="9" id="numero">
-                        </td>
-                        
-                        <td rowspan="2">
-                            <input type="button" value="+" id="suma" class="altura">
-                        </td>
-                    </tr>
-                    <tr>
-                        
-                        <td>
-                            <input type="button" value="4" id="numero">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="5" id="numero"> 
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="6" id="numero">  
-                        </td>
-                        
-                        
-                    </tr>
-                    <tr>
-                        
-                        <td>
-                            <input type="button" value="1" id="numero">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="2" id="numero">
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="3" id="numero">
-                        </td>
-                        
-                        <td rowspan="2">
-                            <input type="button" value="=" id="igual" class="altura"> 
-                        </td>
-                    </tr>
-                    <tr>
-                        
-                        <td colspan="2">
-                            <input type="button" value="0" id="numero" class="anchura">
-                        </td>
-                        
-                        
-                        <td>
-                            <input type="button" value="." id="coma"> 
-                        </td>
-                        
-                        <td>
-                            <input type="button" value="6" id="seis"> 
-                        </td>
-                    </tr>
-
-                </thead>
-            </table>
-        </div> -->
+       
         <div class="box">
-            <div class="display"><input type="text" readonly size="15.75" id="d"></div>
+            <div class="display"><input type="text"  size="15.75" id="d"></div>
             <div class="keys">
                 <p>
-                <input type="button" class="button gray" value="mrc" onclick='c("not defined ")'>
-                <input type="button" class="button gray" value="(" onclick='math("(")'>
-                <input type="button" class="button gray" value=")" onclick='math(")")'>
-                <input type="button" class="button pink" value="/" onclick='math("/")'>
+                <input type="button" class="button gray" value="mrc" onclick='c("not defined ")' >
+                <input type="button" class="button gray" value="(" onclick='math("(")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button gray" value=")" onclick='math(")")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button pink" value="/" onclick='math("/")' onkeypress='mathOnkeyboard()'>
                 </p>
                 <p>
-                <input type="button" class="button red" value="7" onclick='math("7")'>
-                <input type="button" class="button red" value="8" onclick='math("8")'>
-                <input type="button" class="button red" value="9" onclick='math("9")'>
-                <input type="button" class="button pink" value="*" onclick='math("*")'>
+                <input type="button" class="button red" value="7" onclick='math("7")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="8" onclick='math("8")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="9" onclick='math("9")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button pink" value="*" onclick='math("*")' onkeypress='mathOnkeyboard()'>
                 </p>
                 <p>
-                <input type="button" class="button red" value="4" onclick='math("4")'>
-                <input type="button" class="button red" value="5" onclick='math("5")'>
-                <input type="button" class="button red" value="6" onclick='math("6")'>
-                <input type="button" class="button pink" value="-" onclick='math("-")'>
+                <input type="button" class="button red" value="4" onclick='math("4")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="5" onclick='math("5")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="6" onclick='math("6")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button pink" value="-" onclick='math("-")' onkeypress='mathOnkeyboard()'>
                 </p>
                 <p>
-                <input type="button" class="button red" value="1" onclick='math("1")'>
-                <input type="button" class="button red" value="2" onclick='math("2")'>
-                <input type="button" class="button red" value="3" onclick='math("3")'>
-                <input type="button" class="button pink" value="+" onclick='math("+")'>
+                <input type="button" class="button red" value="1" onclick='math("1")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="2" onclick='math("2")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="3" onclick='math("3")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button pink" value="+" onclick='math("+")' onkeypress='mathOnkeyboard()'>
                 </p>
                 <p>
-                <input type="button" class="button red" value="0" onclick='math("0")'>
-                <input type="button" class="button red" value="." onclick='math(".")'>
+                <input type="button" class="button red" value="0" onclick='math("0")' onkeypress='mathOnkeyboard()'>
+                <input type="button" class="button red" value="." onclick='math(".")' onkeypress='mathOnkeyboard()'>
                 <input type="button" class="button red" value="C" onclick='c("")'>
                 <input type="button" class="button orange" value="=" onclick='e()'>
                 </p>
             </div>
         </div>    
-        <script src="js/calcularmethods.js"></script>
+        <!-- <script src="js/calcularmethods.js"></script> -->
         <script src="js/hazCosas.js"></script>
     </body>
 </html>
