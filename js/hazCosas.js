@@ -19,3 +19,9 @@ function e()
       c('Error') 
     } 
 }
+
+function mathOnkeyboard(valPress) {
+    var getNum = valPress.key;
+    document.getElementById("d").value += getNum;
+
+}
